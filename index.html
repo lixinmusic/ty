@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>打字游戏</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/type.js"></script>
+     <!-- 开始界面  
+     游戏进程   如何判断生命 如何判断过关 如何游戏结束
+     失败的界面 -->
+     <script>
+        $(function(){
+            $(".ks").click(
+                function(){
+                    new Typegame()
+                }
+                )
+
+        	$(".js").click(
+                function(){
+                   close();
+                }
+                )
+        })
+     </script>
+     <style>
+        body,html{
+        	height: 100%;
+            margin:0;
+             background:url(./image/0.jpg) no-repeat;
+          background-size: 100%;
+        }
+        .strat{
+            width: 300px;
+            height: 320px;
+            background: red;
+            position: fixed;
+            right:10px;
+            bottom:1px;
+            background: url(image/1.png) no-repeat center center;
+            background-size: 100%;
+        } 
+        .strat>button:nth-of-type(1){
+            width: 120px;
+            height: 35px;
+            font-size: 20px;
+            line-height:35px;
+            text-align: center;
+            margin-top:90px;
+            margin-left: 90px;
+            background:#ffa5d8;
+            border:none; 
+            border-radius: 10px;
+        }
+        .strat>button:nth-of-type(2){
+             width: 120px;
+            height: 35px;
+            font-size: 20px;
+            line-height:35px;
+            text-align: center;
+              margin-top:20px;
+            margin-left: 90px;
+            background: #7ee1cd;
+            border:none;
+            border-radius: 10px;
+        }
+        .strat>button:hover{
+            opacity: 0.8;
+            outline: none;
+        }
+     </style>
+</head>
+<body>
+      <div class="strat">
+          <button class="ks">开始游戏</button>
+          <button class="js">结束游戏</button>
+      </div>         	
+</body>
+</html>
